@@ -11,6 +11,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         color: '#1B4965',
         marginBottom: 20,
+        marginTop: 40
     },
     subHeader: {
         fontSize: 18,
@@ -30,11 +31,13 @@ const styles = StyleSheet.create({
         flex: 1,
         marginHorizontal: 5,
         alignItems: 'center',
+                justifyContent: "center"
     },
     groupText: {
         color: 'white',
         fontSize: 16,
         fontWeight: 'bold',
+
     },
     deviceItem: {
         backgroundColor: '#1B4965',
@@ -56,17 +59,29 @@ const styles = StyleSheet.create({
         marginLeft: 10,
     },
     connectButton: {
-        backgroundColor: '#1B4965',
+        backgroundColor: '#fff',
+        borderWidth: 1,
+        borderColor: "1B4965",
         padding: 15,
         borderRadius: 10,
         alignItems: 'center',
-        marginVertical: 5,
+        marginVertical: 10,
+
     },
     buttonText: {
-        color: 'white',
+        color: '#000',
         fontSize: 16,
         fontWeight: 'bold',
     },
+    navbarContainer: {
+        position: 'absolute',
+        bottom: -30,
+        left: 0,
+        right: 0,
+        height: 100,
+        backgroundColor: '#244761',
+        marginBottom:20 
+    }
 });
 
 export default styles;

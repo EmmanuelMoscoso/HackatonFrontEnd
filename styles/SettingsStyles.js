@@ -4,13 +4,15 @@ import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#fefefe',
+        backgroundColor: '#f5f5f5',
+        padding: 20
     },
     header: {
         fontSize: 24,
         fontWeight: 'bold',
         color: '#1B4965',
         marginBottom: 20,
+        marginTop: 40
     },
     card: {
         backgroundColor: '#fff',
@@ -41,6 +43,15 @@ const styles = StyleSheet.create({
         fontSize: 14,
         color: '#666',
     },
+    navbarContainer: {
+        position: 'absolute',
+        bottom: -30,
+        left: 0,
+        right: 0,
+        height: 100,
+        backgroundColor: '#244761',
+        marginBottom:20 
+    }
 });
 
 export default styles;

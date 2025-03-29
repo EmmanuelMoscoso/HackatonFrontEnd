@@ -23,6 +23,7 @@ const GraphicsScreen = () => {
 
     return (
         <View style={styles.container}>
+            <View>
             <Text style={styles.header}>Estadísticas</Text>
             <View style={styles.buttonContainer}>
                 {['Semana', 'Mes', 'Año'].map((item) => (
@@ -35,35 +36,39 @@ const GraphicsScreen = () => {
                     </TouchableOpacity>
                 ))}
             </View>
-            <ScrollView>
-                <PieChart
-                    data={pieData}
-                    width={screenWidth - 40}
-                    height={200}
-                    chartConfig={{
-                        backgroundGradientFrom: '#fff',
-                        backgroundGradientTo: '#fff',
-                        color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
-                    }}
-                    accessor={'population'}
-                    backgroundColor={'transparent'}
-                    hasLegend={false}
-                />
-                <BarChart
-                    data={barData}
-                    width={screenWidth - 40}
-                    height={220}
-                    chartConfig={{
-                        backgroundGradientFrom: '#fff',
-                        backgroundGradientTo: '#fff',
-                        color: (opacity = 1) => `rgba(29, 147, 210, ${opacity})`,
-                        labelColor: () => '#1B4965',
-                    }}
-                    verticalLabelRotation={30}
-                />
-            </ScrollView>
-            <BottomNavBar/>
+            <View style={styles.graphsContainer}>
+                    <PieChart
+                        data={pieData}
+                        width={screenWidth - 40}
+                        height={200}
+                        chartConfig={{
+                            backgroundGradientFrom: '#fff',
+                            backgroundGradientTo: '#fff',
+                            color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
+                        }}
+                        accessor={'population'}
+                        backgroundColor={'transparent'}
+                        hasLegend={false}
+                    />
+                    <BarChart
+                        data={barData}
+                        width={screenWidth - 80}
+                        height={220}
+                        chartConfig={{
+                            backgroundGradientFrom: '#fff',
+                            backgroundGradientTo: '#fff',
+                            color: (opacity = 1) => `rgba(29, 147, 210, ${opacity})`,
+                            labelColor: () => '#1B4965',
+                        }}
+                        verticalLabelRotation={30}
+                    />
+            </View>
+            </View>
+            <View style={styles.navbar}>
+        <BottomNavBar/>
         </View>
+        </View>
+
     );
 };
 

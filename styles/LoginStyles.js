@@ -52,9 +52,6 @@ const styles = StyleSheet.create({
       color: '#000',
       marginBottom: 5,
     },
-    loginInput: {
-      // Your input styles
-    },
     forgotPasswordText: {
       color: '#1B4965',
       textAlign: 'right',

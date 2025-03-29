@@ -20,10 +20,11 @@ const DevicesScreen = () => {
                 <DeviceItem name="Baño" status="En línea" />
                 <DeviceItem name="Lavabo" status="En línea" />
                 <TouchableOpacity style={styles.connectButton}><Text style={styles.buttonText}>Conectar dispositivo</Text></TouchableOpacity>
-                <TouchableOpacity style={styles.connectButton}><Text style={styles.buttonText}>Conectar dispositivo</Text></TouchableOpacity>
-                <TouchableOpacity style={styles.connectButton}><Text style={styles.buttonText}>Conectar dispositivo</Text></TouchableOpacity>
+
             </ScrollView>
-            <BottomNavBar/>
+            <View style={styles.navbarContainer}>
+                <BottomNavBar/>
+            </View>
         </View>
     );
 };

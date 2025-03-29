@@ -4,13 +4,14 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         padding: 20,
-        backgroundColor: '#fefefe',
+        backgroundColor: '#f5f5f5',
     },
     header: {
         fontSize: 24,
         fontWeight: 'bold',
         color: '#1B4965',
-        marginBottom: 20,
+        marginBottom: 40,
+        marginTop: 40
     },
     buttonContainer: {
         flexDirection: 'row',
@@ -32,6 +33,27 @@ const styles = StyleSheet.create({
     },
     activeButtonText: {
         color: 'white',
+    },
+    scrollContainer: {
+        backgroundColor: "red",
+        padding: 20,
+    },
+    navbar: {
+        position: 'absolute',
+        bottom: -30,
+        left: 0,
+        right: 0,
+        height: 100,
+        backgroundColor: '#244761',
+        marginBottom:20  
+    },
+    graphsContainer: {
+        backgroundColor: "#fff",
+        padding: 10,
+        borderRadius: 10,
+        shadowOffset: { width: 0, height: 4 },
+        shadowOpacity: 0.2,
+        shadowRadius: 4,
     }
 });
 
