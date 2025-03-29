@@ -74,7 +74,6 @@ const styles = StyleSheet.create({
     },
     loginText: {
       textAlign: 'center',
-      marginTop: 20,
       color: '#000',
     },
     loginLink: {

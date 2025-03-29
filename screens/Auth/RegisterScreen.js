@@ -14,11 +14,11 @@ const RegisterScreen = () => {
       <View style={styles.registerContainer}>
         <View style={styles.registerHeader}>
           <Text style={styles.registerTitle}>Registrate</Text>
-          <Text style={styles.registerSubtitle}>REGISTRATE CON NOSOTROS PARA COMENZAR</Text>
+          <Text style={styles.registerSubtitle}>REGISTRATE PARA COMENZAR</Text>
         </View>
         <View style={styles.registerForm}>
           <View style={styles.registerInputContainer}> 
-            <Text style={styles.registerInputLabel}> NOMRE DE USUARIO</Text>
+            <Text style={styles.registerInputLabel}> NOMBRE DE USUARIO</Text>
             <TextInput style={styles.registerInput} placeholder="Introduce tu correo" placeholderTextColor="#000" />
           </View>
           <View style={styles.registerInputContainer}> 
@@ -40,7 +40,7 @@ const RegisterScreen = () => {
             <Text style={styles.loginText}>¿Ya tienes una cuenta?</Text>
             <View style={{ marginTop: 10}}>
             <TouchableOpacity onPress={() => navigation.navigate('LoginScreen')}>
-              <Text style={styles.loginLink}>Regístrate</Text>
+              <Text style={styles.loginLink}>Inicia Sesión</Text>
             </TouchableOpacity>
             </View>
           </View>
