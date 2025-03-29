@@ -30,7 +30,7 @@ const LoginScreen = ({navigation}) => {
           <View>
             <Text style={styles.registerText}>¿No tienes una cuenta?</Text>
             <View style={{ marginTop: 10}}>
-            <TouchableOpacity onPress={() => navigation.navigate('SettingsScreen')}>
+            <TouchableOpacity onPress={() => navigation.navigate('RegisterScreen') }>
               <Text style={styles.registerLink}>Regístrate</Text>
             </TouchableOpacity>
             </View>
