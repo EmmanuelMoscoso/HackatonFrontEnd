@@ -13,15 +13,11 @@ const BottomNavBar = () => {
         <Icon name="home" size={28} color="white" />
       </TouchableOpacity>
 
-      <TouchableOpacity style={styles.navItem} onPress={() => console.log('Calendar')}>
+      <TouchableOpacity style={styles.navItem} onPress={() =>  navigation.navigate('GraphicsScreen')}>
         <Icon name="analytics" size={28} color="white" />
       </TouchableOpacity>
 
-      <TouchableOpacity style={styles.navItem} onPress={() => console.log('Add')}>
-        <Icon name="water" size={32} color="white" />
-      </TouchableOpacity>
-
-      <TouchableOpacity style={styles.navItem} onPress={() => console.log('Files')}>
+      <TouchableOpacity style={styles.navItem} onPress={() =>  navigation.navigate('DevicesScreen')}>
         <Icon name="link" size={28} color="white" />
       </TouchableOpacity>
 
