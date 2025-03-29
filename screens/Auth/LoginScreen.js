@@ -24,7 +24,7 @@ const LoginScreen = ({navigation}) => {
           <View>
             <Text style={styles.forgotPasswordText}>¿Olvidaste tu contraseña?</Text>
           </View>
-          <TouchableOpacity style={styles.loginButton}>
+          <TouchableOpacity onPress={() => navigation.navigate('DashboardScreen') }style={styles.loginButton}>
             <Text style={styles.loginButtonText}>Iniciar Sesión</Text>
           </TouchableOpacity>
           <View>

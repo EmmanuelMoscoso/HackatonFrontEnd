@@ -74,7 +74,6 @@ const styles = StyleSheet.create({
     },
     registerText: {
       textAlign: 'center',
-      marginTop: 20,
       color: '#000',
     },
     registerLink: {
@@ -86,4 +85,3 @@ const styles = StyleSheet.create({
   });
 
   export default styles;
-// Compare this snippet from styles/LoginStyles.js:
