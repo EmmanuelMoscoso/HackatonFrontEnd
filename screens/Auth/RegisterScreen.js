@@ -1,12 +1,8 @@
 import React from 'react';
 import { View, Text, TextInput, TouchableOpacity, ImageBackground, StyleSheet } from 'react-native';
 import styles from '../../styles/RegisterStyles';
-import { useNavigation } from '@react-navigation/native';
-import { Pressable } from 'react-native-gesture-handler';
 
-const RegisterScreen = () => {
-
-    const navigation = useNavigation();
+const RegisterScreen = ({navigation}) => {
 
   return (
     <View style={styles.mainContainer}>

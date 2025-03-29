@@ -1,12 +1,15 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, ScrollView } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
+import { View, Text, TouchableOpacity, ScrollView } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import styles from '../../styles/SettingsStyles'; // Adjust the import path as necessary
-import { Pressable } from 'react-native-gesture-handler';   
+import styles from '../../styles/SettingsStyles';
+import BottomNavBar from '../../navigation/BottomNavBar';
+import { useNavigation } from '@react-navigation/native'; 
 
-const SettingsScreen = () => {
-    const navigation = useNavigation();
+
+const SettingsScreen = ({navigation}) => {
+    const handleLogout = () => {
+        navigation.navigate('LoginScreen');
+    };
 
     return (
         <View style={styles.container}>
@@ -17,9 +20,9 @@ const SettingsScreen = () => {
                     <SettingItem icon="notifications-outline" title="Notificaciones" subtitle="Administra tus notificaciones" />
                     <SettingItem icon="accessibility-outline" title="Accesibilidad" subtitle="Lo que mejor funcione para ti" />
                     <SettingItem icon="options-outline" title="Preferencias" subtitle="Personaliza nuestra app" />
-                    <SettingItem icon="log-out-outline" title="Cerrar sesión" subtitle="Cierra tu sesión actual" color="#D32F2F" />
+                    <SettingItem icon="log-out-outline" title="Cerrar sesión" subtitle="Cierra tu sesión actual" color="#D32F2F" onPress={(handleLogout)}/>
                 </View>
-                <View style={styles.card}>
+                <View style={styles.card}>  
                     <SettingItem icon="information-circle-outline" title="Sobre nuestra app" />
                     <SettingItem icon="help-circle-outline" title="Ayuda y soporte" />
                     <SettingItem icon="help-outline" title="Preguntas frecuentes" />
@@ -27,13 +30,20 @@ const SettingsScreen = () => {
                     <SettingItem icon="alert-circle-outline" title="Reportar un error" color="#D32F2F" />
                 </View>
             </ScrollView>
+            <BottomNavBar/>
         </View>
     );
 };
 
-const SettingItem = ({ icon, title, subtitle, color = '#1B4965' }) => {
+const SettingItem = ({ icon, title, subtitle, color = '#1B4965', onPress }) => {
     return (
-        <TouchableOpacity style={styles.item}>
+        <TouchableOpacity 
+        style={styles.item}
+        onPress={onPress}
+        activeOpacity={0.7}
+        accessible={true}
+        accessibilityLabel={title}
+        accessibilityHint={subtitle || `Navegar a ${title}`}>
             <Ionicons name={icon} size={24} color={color} />
             <View style={styles.textContainer}>
                 <Text style={[styles.itemTitle, { color }]}>{title}</Text>
