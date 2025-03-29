@@ -4,6 +4,7 @@ import { useNavigation } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
 import styles from '../../styles/SettingsStyles'; // Adjust the import path as necessary
 import { Pressable } from 'react-native-gesture-handler';   
+import BottomTabNavigation from '../../navigation/BottonTabNavigator';
 
 const SettingsScreen = () => {
     const navigation = useNavigation();
@@ -27,6 +28,7 @@ const SettingsScreen = () => {
                     <SettingItem icon="alert-circle-outline" title="Reportar un error" color="#D32F2F" />
                 </View>
             </ScrollView>
+            <BottomTabNavigation/>
         </View>
     );
 };
