@@ -30,7 +30,9 @@ const SettingsScreen = ({navigation}) => {
                     <SettingItem icon="alert-circle-outline" title="Reportar un error" color="#D32F2F" />
                 </View>
             </ScrollView>
+            <View style={styles.navbarContainer}>
             <BottomNavBar/>
+            </View>
         </View>
     );
 };
